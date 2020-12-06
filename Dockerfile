@@ -14,6 +14,6 @@ RUN dnf update -y && dnf install -y \
   # XFig utilities
   transfig \
   # syntax highlighting package
-  python3-pygments \
+  python3-pygments && \
   # Remove more unnecessary stuff
   dnf clean all
