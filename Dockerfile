@@ -6,14 +6,18 @@ RUN set -x && adduser \
   latex
 
 RUN dnf update -y && dnf install -y \
-  texlive-scheme-full \
-  # some auxiliary tools
-  wget git make openssh-clients python3-pip python3-dateutil python3-virtualenv \
-  # markup format conversion tool
-  pandoc pandoc-citeproc \
-  # XFig utilities
-  transfig \
-  # syntax highlighting package
-  python3-pygments && \
-  # Remove more unnecessary stuff
+  wget git make openssh-clients \
+  java-11-openjdk-headless lua \
+  python3-pip python3-dateutil python3-virtualenv \
+  pandoc pandoc-citeproc transfig python3-pygments && \
   dnf clean all
+
+COPY texlive.profile /
+
+RUN wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz && \
+  mkdir -p install-tl && \
+  tar -xvf install-tl-unx.tar.gz -C install-tl/ --strip-components=1 && \
+  /install-tl/install-tl --profile /texlive.profile && \
+  rm -rf /install-tl* && \
+  /usr/local/texlive/2020/bin/x86_64-linux/tlmgr path add && \
+  tlmgr update --self --reinstall-forcibly-removed --all
