@@ -6,7 +6,7 @@ RUN set -x && adduser \
   latex
 
 RUN dnf update -y && dnf install -y \
-  wget git make openssh-clients \
+  wget git make openssh-clients find \
   java-11-openjdk-headless lua \
   python3-pip python3-dateutil python3-virtualenv \
   pandoc pandoc-citeproc transfig python3-pygments && \
