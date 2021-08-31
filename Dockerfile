@@ -8,7 +8,7 @@ RUN set -x && adduser \
 RUN dnf update -y && dnf install -y \
   wget git make openssh-clients findutils \
   java-11-openjdk-headless lua \
-  python3-pip python3-dateutil python3-virtualenv \
+  python3-pip python3-dateutil \
   pandoc pandoc-citeproc transfig python3-pygments && \
   dnf clean all
 
