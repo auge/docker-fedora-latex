@@ -19,5 +19,4 @@ RUN wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz && \
   tar -xvf install-tl-unx.tar.gz -C install-tl/ --strip-components=1 && \
   /install-tl/install-tl --profile /texlive.profile && \
   rm -rf /install-tl* && \
-  /usr/local/texlive/2020/bin/x86_64-linux/tlmgr path add && \
   tlmgr update --self --reinstall-forcibly-removed --all
