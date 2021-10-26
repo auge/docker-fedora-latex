@@ -1,9 +1,6 @@
 FROM fedora:latest
 
-RUN set -x && adduser \
-  --home /home/latex \
-  --uid 1000 \
-  latex
+RUN set -x && adduser --home /home/latex --uid 1000 latex
 
 RUN dnf update -y \
   && dnf install -y wget git make openssh-clients findutils \
