@@ -6,7 +6,7 @@ RUN dnf update -y \
   && dnf install -y wget git make openssh-clients findutils \
   java-11-openjdk-headless lua libnsl \
   python3-pip python3-dateutil python3-pygments \
-  pandoc pandoc-citeproc transfig \
+  pandoc transfig \
   && dnf clean all
 
 COPY texlive.profile /
