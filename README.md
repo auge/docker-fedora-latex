@@ -6,10 +6,13 @@ Fedora's DNF package manager per default includes all required dependencies (i.e
 
 Furthermore, Python tools pip and virtualenv are included for enhanced processing.
 
-## Instructions
+Pull from [docker hub](https://hub.docker.com/r/steinweb/fedora-latex):
+```sh
+docker pull steinweb/fedora-latex
+```
 
-to build, issue:
+## Building manually
 
 ```sh
-docker build -t steinweb/fedora-latex:latest .
+docker build -t your_tag .
 ```
