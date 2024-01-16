@@ -7,6 +7,7 @@ RUN dnf update -y \
   java-latest-openjdk-headless lua libnsl \
   python3-pip python3-dateutil python3-pygments \
   pandoc transfig perl-sigtrap perl-Time-HiRes perl-Unicode-Normalize which \
+  libxcrypt-compat \
   && dnf clean all
 
 COPY texlive.profile /
