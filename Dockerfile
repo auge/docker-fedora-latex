@@ -6,7 +6,7 @@ RUN dnf update -y \
   && dnf install -y wget git make openssh-clients findutils \
   java-latest-openjdk-headless lua libnsl \
   python3-pip python3-dateutil python3-pygments \
-  pandoc transfig perl-sigtrap perl-Time-HiRes perl-Unicode-Normalize which \
+  pandoc transfig perl-File-Find perl-sigtrap perl-Time-HiRes perl-Unicode-Normalize which \
   libxcrypt-compat \
   && dnf clean all
 
