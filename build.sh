@@ -1,14 +1,17 @@
 #/usr/bin/env sh
 
+# docker user & image name
+username=steinweb
+image=fedora-latex
+
 l=latest
 tag=$(date +"%Y-%m-%d")
-m=$(uname -m)
-if [ $m != x86_64 ]; then
-    tag=$tag-$m
-    l=$l-$m
-fi
 echo Tag: $tag
-docker build --no-cache -t steinweb/fedora-latex:$tag --pull .
-docker tag steinweb/fedora-latex:$tag steinweb/fedora-latex:$l
-docker push steinweb/fedora-latex:$tag
-docker push steinweb/fedora-latex:$l
+
+docker buildx build \
+--push \
+--pull \
+--platform linux/arm64/v8,linux/amd64 \
+--tag $username/$image:$tag \
+--tag $username/$image:$l \
+.
