@@ -1,14 +1,14 @@
-# texlive.profile written on Thu Mar 14 18:20:32 2024 UTC
+# texlive.profile written on Fri Aug 29 17:47:05 2025 UTC
 # It will NOT be updated and reflects only the
 # installation profile at installation time.
 selected_scheme scheme-custom
-TEXDIR /usr/local/texlive/2024
-TEXMFCONFIG ~/.texlive2024/texmf-config
+TEXDIR /usr/local/texlive/2025
+TEXMFCONFIG ~/.texlive2025/texmf-config
 TEXMFHOME ~/texmf
 TEXMFLOCAL /usr/local/texlive/texmf-local
-TEXMFSYSCONFIG /usr/local/texlive/2024/texmf-config
-TEXMFSYSVAR /usr/local/texlive/2024/texmf-var
-TEXMFVAR ~/.texlive2024/texmf-var
+TEXMFSYSCONFIG /usr/local/texlive/2025/texmf-config
+TEXMFSYSVAR /usr/local/texlive/2025/texmf-var
+TEXMFVAR ~/.texlive2025/texmf-var
 binary_aarch64-linux 1
 binary_x86_64-linux 1
 collection-basic 1
@@ -66,6 +66,6 @@ tlpdbopt_install_docfiles 0
 tlpdbopt_install_srcfiles 0
 tlpdbopt_post_code 1
 tlpdbopt_sys_bin /usr/local/bin
-tlpdbopt_sys_info /usr/local/info
-tlpdbopt_sys_man /usr/local/man
+tlpdbopt_sys_info /usr/local/share/info
+tlpdbopt_sys_man /usr/local/share/man
 tlpdbopt_w32_multi_user 1
