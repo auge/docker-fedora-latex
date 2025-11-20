@@ -1,4 +1,5 @@
-FROM fedora:latest
+#FROM fedora:43
+FROM quay.io/fedora/fedora:43
 
 RUN set -x && adduser --home /home/latex --uid 1000 latex
 
